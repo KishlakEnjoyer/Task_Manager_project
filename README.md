@@ -2,10 +2,12 @@
 
 > A sleek, responsive, and intuitive task management app built for developers who value simplicity, productivity, and clean code.  
 > Organize your day, set deadlines, and stay on track — all in one place.
-
-![Demo](https://via.placeholder.com/800x400?text=Task+Manager+Preview+-+Ant+Design+%26+FastAPI)
-
+> 
 ## 🛠️ Tech Stack
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=react,ts,vite,antd,axios,python,fastapi,sqlalchemy,pydantic,mysql,docker,compose,jwt" />
+</p>
 
 | Layer       | Technologies |
 |-------------|--------------|
