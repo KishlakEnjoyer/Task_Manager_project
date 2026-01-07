@@ -132,4 +132,3 @@ Made with ❤️ by **Erik Fayzullin**, **Roman Khasanov**, **Bulat Shaiheev**
 
 > ✨ **Keep coding. Keep shipping.**  
 > — The XDGroup Team
-```
