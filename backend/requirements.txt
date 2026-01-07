@@ -1,0 +1,24 @@
+# Core
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+## MySQL
+aiomysql>=0.2.0
+sqlalchemy[asyncio]>=2.0.30
+
+pydantic>=2.9.0
+pydantic-settings>=2.5.0
+
+fastapi[all]  # ← включает python-multipart и другие полезности
+
+passlib[bcrypt]>=1.7.4        # для хэширования паролей
+python-jose[cryptography]>=3.3.0  # для JWT 
+alembic>=1.13.0               # для миграций БД
+email-validator>=2.1.0        # валидировать email в Pydantic
+
+httpx>=0.27.0                 
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
