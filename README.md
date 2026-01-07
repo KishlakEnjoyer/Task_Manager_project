@@ -1,4 +1,3 @@
-```markdown
 # 📋 XDGroup Task Manager
 
 > A sleek, responsive, and intuitive task management app built for developers who value simplicity, productivity, and clean code.  
