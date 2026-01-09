@@ -1,0 +1,28 @@
+:root {
+    --black-100: #000000;
+    --black-90: #131313;
+    --black-80: #1f1f1f;
+    --black-70: #303030;
+    --black-60: #3f3f3f;
+
+    --white-100: #ffffff;
+    --white-90: #f3f3f3;
+    --white-80: #e7e7e7;
+    --white-70: #dbdbdb;
+    --white-60: #d4d4d4;
+
+    --accent-100: #006eff;
+    --accent-50: #006eff50;
+    --accent-20: #006eff20;
+
+    --size-4xl: 64px;
+    --size-3xl: 48px;
+    --size-2xl: 32px;
+    --size-xl: 24px;
+    --size-lg: 20px;
+    --size-base: 16px;
+    --size-sm: 12px;
+    --size-xs: 8px;
+    --size-2xs: 4px;
+    --size-3xs: 2px;
+}

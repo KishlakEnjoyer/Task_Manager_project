@@ -1,0 +1,69 @@
+.login-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-title {
+    color: #EAEAEA;
+    font-weight: normal;
+}
+
+.rights {
+    color: var(--white-100);
+    opacity: 0.5;
+    font-size: var(--size-sm);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--size-base);
+    border-bottom: var(--black-90) 1px solid;
+    width: 100%;
+}
+
+footer {
+    padding: var(--size-base);
+    
+}
+
+.glow-blum {
+    height: 800px;
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    bottom: -40%;
+    background-color: var(--accent-100);
+    transform: translateX(-50%);
+    border-radius: 100%;
+    filter: blur(400px);
+    z-index: -1;
+    animation: glow-move infinite 10s ease;
+}
+
+@keyframes glow-move {
+    0% {
+        opacity: 0.5;
+        filter: blur(200px);
+        
+    }
+    50% {
+        opacity: 1;
+        filter: blur(300px);
+    }
+    100% {
+        opacity: 0.5;
+        filter: blur(200px);
+    }
+}
