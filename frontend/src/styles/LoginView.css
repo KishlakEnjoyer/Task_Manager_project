@@ -14,45 +14,43 @@
 }
 
 .logo-title {
-    color: #EAEAEA;
-    font-weight: normal;
-}
-
-.rights {
     color: var(--white-100);
-    opacity: 0.5;
-    font-size: var(--size-sm);
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--size-base);
-    border-bottom: var(--black-90) 1px solid;
-    width: 100%;
-}
-
-footer {
-    padding: var(--size-base);
-    
+    font-weight: normal;
+    font-family: 'Unbounded';
 }
 
 .glow-blum {
-    height: 800px;
-    width: 1200px;
-    position: absolute;
+    position: fixed;
     left: 50%;
-    bottom: -40%;
-    background-color: var(--accent-100);
     transform: translateX(-50%);
-    border-radius: 100%;
+    border-radius: 50%;
+}
+.glow-blum.big {
+    bottom: -400px;
+
+    width: 1200px;
+    height: 800px;
+
+    background-color: var(--accent-100);
     filter: blur(400px);
+    z-index: -2;
+
+    animation: glow-move-big infinite 10s ease;
+}
+.glow-blum.small {
+    bottom: -200px;
+    
+    width: 600px;
+    height: 400px;
+
+    background-color: var(--accent-150);
+    filter: blur(100px) !important;
     z-index: -1;
-    animation: glow-move infinite 10s ease;
+
+    animation: glow-move-small infinite 10s ease;
 }
 
-@keyframes glow-move {
+@keyframes glow-move-big {
     0% {
         opacity: 0.5;
         filter: blur(200px);
@@ -65,5 +63,21 @@ footer {
     100% {
         opacity: 0.5;
         filter: blur(200px);
+    }
+}
+
+@keyframes glow-move-big {
+    0% {
+        opacity: 0.5;
+        filter: blur(100px);
+        
+    }
+    50% {
+        opacity: 1;
+        filter: blur(200px);
+    }
+    100% {
+        opacity: 0.5;
+        filter: blur(100px);
     }
 }

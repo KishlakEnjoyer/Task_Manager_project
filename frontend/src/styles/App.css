@@ -1,44 +1,47 @@
-@import './Variables.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    font-family: 'Inter';
-    transition: all .1s ease;
-    text-decoration: none;
+:root {
+    --white-100: #FFFFFF;
+
+    --accent-150: #DADFFF;
+    --accent-100: #1668DC;
+
+    --size-4xl: 64px;
+    --size-3xl: 48px;
+    --size-2xl: 32px;
+    --size-xl: 24px;
+    --size-lg: 20px;
+    --size-base: 16px;
+    --size-sm: 12px;
+    --size-xs: 8px;
+    --size-2xs: 4px;
+    --size-3xs: 2px;
 }
 
 body {
+    margin: 0;
     height: 100vh;
     overflow: hidden;
-    background-color: var(--black-100);
+    background-color: rgb(0, 0, 0);
+    font-family: 'Inter';
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Unbounded';
-    color: var(--white-100);
-}
-p {
-    color: var(--white-100);
-}
-.sub {
-    color: var(--white-60);
-}
-
-a {
-    &:hover {
-        opacity: 0.8;
-    }
-}
-
-.App, #root {
+#root, .App {
     height: 100%;
 }
 
-.ant-form-item-explain-error {
-    float:left;
+.main-container {
+    height: 100%;
+}
+
+.header {
+    padding: var(--size-base);
+}
+
+.footer {
+    color: #FFFFFF;
+    opacity: 0.5;
+    padding: var(--size-base);
+    font-size: var(--size-sm);
 }
