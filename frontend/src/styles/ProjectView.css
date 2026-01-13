@@ -1,0 +1,15 @@
+.transparent-menu-popup,
+.transparent-menu-popup .ant-menu {
+  background: transparent !important;
+}
+
+.ant-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-layout-sider {
+  max-width: 400px !important; 
+  width: 100% !important;
+  flex: 0 0 300px !important;
+}
