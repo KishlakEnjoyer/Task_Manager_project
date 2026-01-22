@@ -5,6 +5,7 @@ import {
   LogoutOutlined,
   FolderAddOutlined,
   PlusOutlined,
+  UserOutlined,
 } from '@ant-design/icons';
 
 import { Layout,
@@ -17,59 +18,74 @@ import { Layout,
   Flex,
   Tooltip,
   Card,
+  Avatar,
+  Tabs,
 } from 'antd';
 
-import type { MenuProps } from 'antd';
-import type { GetProps } from 'antd';
+import type { MenuProps, GetProps, TabsProps } from 'antd';
 
 type SearchProps = GetProps<typeof Input.Search>;
 type MenuItem = Required<MenuProps>['items'][number];
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 const { Header, Content, Sider } = Layout;
 const { Search } = Input;
 const onSearch: SearchProps['onSearch'] = (value, _e, info) => console.log(info?.source, value);
 
+const tabsItems: TabsProps['items'] = [
+  {
+    key: '1',
+    label: 'z-1512431',
+    children:
+      <Card title="Stage description">
+        <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, architecto cumque quas eligendi aliquid in expedita, amet porro obcaecati unde, distinctio quae itaque culpa asperiores tempore quibusdam repellat enim ullam?</Text>
+      </Card>,
+  },
+  {
+    key: '2',
+    label: 'z-151211',
+    children:
+      <Card title="Stage description">
+        <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, architecto cumque quas eligendi aliquid in expedita, amet porro obcaecati unde, distinctio quae itaque culpa asperiores tempore quibusdam repellat enim ullam? 123 123 1 12321 12312 312 </Text>
+      </Card>,
+  },
+  {
+    key: '3',
+    label: 'z-153',
+    children:
+      <Card title="Stage description">
+        <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, architecto cumque quas eligendi aliquid in expedita, amet porro obcaecati unde, distinctio quae itaque culpa asperiores tempore quibusdam repellat enim ullam? 123 123</Text>
+      </Card>,
+  },
+];
+
+const tabs: TabsProps['items'] = [
+  {
+    key: '1',
+    label: 'Начало',
+    children: tabsItems[0]?.children,
+  },
+  {
+    key: '2',
+    label: 'Делаем структуру',
+    children: tabsItems[1]?.children,
+  },
+  {
+    key: '3',
+    label: 'Анальный секс',
+    children: tabsItems[2]?.children,
+  },
+];
 
 const items: MenuItem[] = [
-  {
-    key: 'sub1',
-    label: 'Project Name 1',
-    children: [
-      {
-        key: 'g1',
-        label: 'Stage 1',
-        type: 'group',
-        children: [
-          { key: '1', label: 'Make it better' },
-          { key: '2', label: 'Make it bigger' },
-        ],
-      },
-      {
-        key: 'g2',
-        label: 'Stage 2',
-        type: 'group',
-        children: [
-          { key: '3', label: 'Make it lower' },
-          { key: '4', label: 'Just make it' },
-        ],
-      },
-    ],
-  },
   {
     key: 'sub2',
     label: 'Project Name 2',
     children: [
-      { key: '5', label: 'Option 5' },
-      { key: '6', label: 'Option 6' },
-      {
-        key: 'sub3',
-        label: 'Submenu',
-        children: [
-          { key: '7', label: 'Option 7' },
-          { key: '8', label: 'Option 8' },
-        ],
-      },
+      { key: '5', label: 'Stage 1' },
+      { key: '6', label: 'Stage 2' },
+      { key: '6', label: 'Stage 3' },
+      { key: '6', label: 'Stage 4' },
     ],
   }
 ];
@@ -82,13 +98,9 @@ const App: React.FC = () => {
         breakpoint="lg"
         collapsedWidth="0"
         theme="light"
-        style={{
-          // background: 'transparent',
-          borderRight: '1px solid rgba(253,253,253,0.12)',
-        }}
+        style={{ borderRight: '1px solid rgba(253,253,253,0.12)' }}
       >
         <Flex gap='middle' vertical style={{ padding: '24px 24px 0 24px' }}>
-
         
         <div className="logo">
           <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,9 +131,11 @@ const App: React.FC = () => {
         />
 
         <div style={{ marginTop: 'auto' }}>
+
           <Divider/>
 
           <Space vertical style={{ padding: '0 16px 16px 16px', width: '100%' }}>
+
             <Button
               block
               icon={<SettingOutlined />}
@@ -131,6 +145,7 @@ const App: React.FC = () => {
             >
               Settings
             </Button>
+
             <Button
               block
               icon={<LogoutOutlined />}
@@ -147,19 +162,20 @@ const App: React.FC = () => {
       </Sider>
 
       <Layout>
-        <Header style={{ padding: '24px', background: 'transparent' }}>
+        <Header style={{ padding: '24px 24px 0 24px', background: 'transparent', display: 'flex', justifyContent: 'space-between', height: 'fit-content' }}>
+
           <Title level={2} style={{ margin: 0, fontFamily: 'Unbounded' }}>
-            Project Name
+            Невъебический проект
           </Title>
-        </Header>
-        <Content style={{ padding: 24 }}>
-          <Card title="Description of the Stage">
-            <p>Card content</p>
-            <p>Card content</p>
-            <p>Card content</p>
-          </Card>
           
+          <Avatar size='large' icon={<UserOutlined />}/>
+
+        </Header>
+
+        <Content style={{ padding: '0 24px'}}>
+          <Tabs defaultActiveKey="1" items={tabs} />
         </Content>
+
       </Layout>
     </Layout>
   );
