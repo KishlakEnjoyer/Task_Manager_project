@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginView />} />
           <Route path="/project" element={<ProjectView />} />
-          <Route path="/" element={<div>Главная страница</div>} />
+          <Route path="/" element={<div></div>} />
           <Route path="*" element={<div>404 — Страница не найдена</div>} />
         </Routes>
       </div>
